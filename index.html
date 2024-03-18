@@ -74,10 +74,14 @@
                 }
 
                 var useragt = navigator.userAgent.toLowerCase();
-                var target_url = location.href.replace(
-                    "https://links",
-                    "https://x"
-                );
+
+                var target_url = `https://x.nexivil.com${window.location.search
+                    .slice(1)
+                    .split("&")
+                    .map(function (s) {
+                        return s.replace(/~and~/g, "&");
+                    })
+                    .join("?")}`;
 
                 if (useragt.match(/kakaotalk/i)) {
                     //카카오톡 외부브라우저로 호출
