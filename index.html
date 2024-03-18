@@ -51,12 +51,6 @@
         />
         <meta name="twitter:image" content="https://x.nexivil.com/og.png" />
 
-        <!-- Site Verfication -->
-        <meta
-            name="naver-site-verification"
-            content="ba5335f39791457ba70ce4614bd5135140fed9d4"
-        />
-
         <!-- 
             Support 'Preview' channel
         -->
@@ -112,6 +106,8 @@
                             target_url.replace(/https?:\/\//i, "") +
                             "#Intent;scheme=http;package=com.android.chrome;end";
                     }
+                } else {
+                    location.href = target_url;
                 }
             });
         </script>
